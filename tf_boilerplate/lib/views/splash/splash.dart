@@ -64,11 +64,13 @@ class _MyHomePageState extends State<SplashScreen> with WidgetsBindingObserver {
   }
 
   startTimer() {
+    print('xxx-startTimer');
     var _duration = Duration(milliseconds: 2000);
     return Timer(_duration, navigate);
   }
 
-  navigate() async {
+  navigate() {
+    print('xxx-navigate');
     Navigator.popAndPushNamed(context, '$homeViewRoute');
   }
 }
